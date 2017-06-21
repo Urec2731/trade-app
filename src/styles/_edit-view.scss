@@ -1,0 +1,18 @@
+.edit-form-container {
+	text-align: left;
+
+	label {
+		width: 30%;
+	}
+	
+	input {
+		width: 70%;
+	}
+}
+
+.product_id_edit_container,
+.product_name_edit_container,
+.product_price_edit_container,
+.product_quantity_edit_container {
+	@extend .col-md-12;
+}

@@ -26,7 +26,8 @@ class FormView extends Component {
 		this.onChange = this.onChange.bind(this);
 	}
 	
-	clickHandler () {
+	clickHandler (e) {
+		e.stopPropagation();
 		this.props.addItem({...this.state, uuid: uuid.v4()});
 		this.setState(initialState);
 	}
@@ -40,21 +41,25 @@ class FormView extends Component {
 			<div className='input-form-container'>
 				<InputValue 
 					className={PRODUCT_ID}
+					role="input"
 					value={this.state[PRODUCT_ID]}
 					propertyKey={PRODUCT_ID}
 					onChange={this.onChange}/>
 				<InputValue 
 					className={PRODUCT_NAME}
+					role="input"
 					value={this.state[PRODUCT_NAME]}
 					propertyKey={PRODUCT_NAME}
 					onChange={this.onChange}/>
 				<InputValue 
 					className={PRODUCT_PRICE}
+					role="input"
 					value={this.state[PRODUCT_PRICE]}
 					propertyKey={PRODUCT_PRICE}
 					onChange={this.onChange}/>
 				<InputValue 
 					className={PRODUCT_QUANTITY}
+					role="input"
 					value={this.state[PRODUCT_QUANTITY]}
 					propertyKey={PRODUCT_QUANTITY}
 					onChange={this.onChange}/>

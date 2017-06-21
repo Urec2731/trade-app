@@ -3,6 +3,10 @@
 	padding: 0px; 
 }
 
+	.product-view-container:hover {
+		background-color: #c5c5c5;
+	}
+
 .product-view-container{
 	@extend .col-md-12;
 	padding: 0px; 

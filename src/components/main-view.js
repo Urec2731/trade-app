@@ -6,12 +6,13 @@ import {
   PRODUCT_QUANTITY,
 } from '../utils/constants';
 
-const MainView = ({items, removeItem}) => {
+const MainView = ({items, removeItem, editItem}) => {
 	const renderItems = () =>
 		items.map((item, position) => {
 			return (
 				<div
 					className="product-view-container"
+					onClick={(e) => {editItem(item, e)}}
 					key={position}>
 					<span className="product-id">{item[PRODUCT_ID]}</span>
 					<span className="product-name">{item[PRODUCT_NAME]}</span>
@@ -19,7 +20,7 @@ const MainView = ({items, removeItem}) => {
 					<span className="product-quantity">{item[PRODUCT_QUANTITY]}</span>
 					<button
 						className="remove-button"
-						onClick={() => {removeItem(item.uuid)}}
+						onClick={(e) => {removeItem(item.uuid, e)}}
 					>Remove</button>
 				</div>
 			);
@@ -32,6 +33,7 @@ const MainView = ({items, removeItem}) => {
 
 MainView.propTypes = {
   items: PropTypes.array.isRequired,
+  editItem: PropTypes.func.isRequired,
   removeItem: PropTypes.func.isRequired,
 };
 
