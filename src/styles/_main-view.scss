@@ -1,0 +1,26 @@
+.main-view-area {
+	@extend .col-md-12;
+	padding: 0px; 
+}
+
+.product-view-container{
+	@extend .col-md-12;
+	padding: 0px; 
+	
+	.product-id {
+		@extend .col-md-2;
+	}
+	.product-name {
+		@extend .col-md-4;
+	}
+	.product-price {
+		@extend .col-md-2;
+	}
+	.product-quantity {
+		@extend .col-md-3;
+	}
+	.remove-button {
+		@extend .btn;
+		@extend .col-md-1;
+	}
+}

@@ -1,0 +1,32 @@
+.input-form-container {
+	text-align: left;
+
+	label {
+		width: 30%;
+	}
+	
+	input {
+		width: 70%;
+	}
+}
+
+.product_id_input_container {
+	@extend .col-md-2;
+}
+
+.product_name_input_container {
+	@extend .col-md-4;
+}
+
+.product_price_input_container {
+	@extend .col-md-2;
+}
+
+.product_quantity_input_container {
+	@extend .col-md-3;
+}
+
+.add-button {
+	@extend .btn;
+	@extend .col-md-1;
+}
